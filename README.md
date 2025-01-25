@@ -13,7 +13,7 @@ NOD.LBX 工具简化了 [Luban](https://github.com/focus-creative-games/luban) �
   | ✅ | ✅ | ✅ |
 
 ## Manual | 使用手册
-- Install/安装: npm i -g et.nod.lbx
+- Install/安装: npm install et.nod.lbx
   - Prerequisites/前置条件:
     - [.NET SDK 8.0+](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
     - [WinRAR](https://www.win-rar.com/start.html?L=0) / [7-Zip](https://www.7-zip.org/)

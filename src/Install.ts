@@ -41,7 +41,7 @@ export namespace Install {
                     let url = `https://github.com/focus-creative-games/luban/releases/download/v${version}/Luban.7z`
 
                     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone.toLocaleLowerCase()
-                    if (XString.Contains(tz, "shanghai") || !XString.IsNullOrEmpty(gitproxy)) {
+                    if (XString.Contains(tz, "shanghai") || !XString.IsNullOrEmpty(gitproxy) || process.env.GITHUB_ACTIONS != null) {
                         if (XString.IsNullOrEmpty(gitproxy)) gitproxy = "https://ghproxy.cn/"
                         url = `${gitproxy.endsWith("/") ? gitproxy : gitproxy + "/"}${url}`
                         XLog.Debug(`Install.Process: using git proxy of ${gitproxy}.`)
