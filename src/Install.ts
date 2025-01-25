@@ -9,7 +9,7 @@ import * as fs from "fs"
 import * as https from "https"
 
 export namespace Install {
-    export async function Process(args: string[]): Promise<void> {
+    export async function Process(args: string[]): Promise<string[]> {
         return new Promise(async (resolve, reject) => {
             let version = null
             let gitproxy = null
@@ -84,7 +84,7 @@ export namespace Install {
                     reject(err)
                 }
             }
-            resolve()
+            resolve(nargs)
         })
     }
 }
