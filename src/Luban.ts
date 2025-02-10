@@ -20,7 +20,7 @@ import { spawnSync } from "child_process"
     if (args.length == 0 || args.indexOf("--help") >= 0) {
         try {
             // 读取并显示帮助文档
-            const mfile = XFile.PathJoin(XEnv.DataPath, "..", "README.md")
+            const mfile = XFile.PathJoin(XEnv.LocalPath, "..", "README.md")
             if (XFile.HasFile(mfile)) {
                 const lines = XFile.OpenText(mfile).split("\n")
                 const nlines = new Array<string>()
@@ -47,7 +47,7 @@ import { spawnSync } from "child_process"
     }
 
     // 启动 Luban 进程
-    const bin = XFile.PathJoin(XEnv.DataPath, "Luban", "Luban.dll")
+    const bin = XFile.PathJoin(XEnv.LocalPath, "Luban", "Luban.dll")
     args.unshift(bin)
     const child = spawnSync("dotnet", args, {
         stdio: [process.stdin, process.stdout, process.stderr],

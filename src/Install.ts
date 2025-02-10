@@ -42,7 +42,7 @@ export namespace Install {
             }
 
             // 检查本地版本
-            const local = XFile.PathJoin(XEnv.DataPath, "Luban.ver")
+            const local = XFile.PathJoin(XEnv.LocalPath, "Luban.ver")
             if (XFile.HasFile(local) && XString.IsNullOrEmpty(version)) {
                 XLog.Debug(`Luban: @${XFile.OpenText(local)}`)
             } else {
@@ -62,7 +62,7 @@ export namespace Install {
                     XLog.Debug(`Install.Process: fetch from ${url}.`)
 
                     // 下载并解压工具包
-                    const zip = XFile.PathJoin(XEnv.DataPath, XFile.FileName(url))
+                    const zip = XFile.PathJoin(XEnv.LocalPath, XFile.FileName(url))
                     const ws = fs.createWriteStream(zip)
 
                     await new Promise((resolve, reject) => {
@@ -71,7 +71,7 @@ export namespace Install {
                             ws.on("finish", () => {
                                 ws.close(() => {
                                     XLog.Debug(`Install.Process: fetch into ${zip}.`)
-                                    XFile.Unzip(zip, XEnv.DataPath, resolve)
+                                    XFile.Unzip(zip, XEnv.LocalPath, resolve)
                                 })
                             })
                         }).on("error", reject)
@@ -81,13 +81,13 @@ export namespace Install {
                     XFile.DeleteFile(zip)
 
                     // 设置可执行权限
-                    const dllFile = XFile.PathJoin(XEnv.DataPath, "Luban", "Luban.dll")
+                    const dllFile = XFile.PathJoin(XEnv.LocalPath, "Luban", "Luban.dll")
                     if (XFile.HasFile(dllFile)) {
                         fs.chmodSync(dllFile, 0o755)
                         XLog.Debug(`Install.Process: chmod Luban.dll to 0o755.`)
                     }
 
-                    const execFile = XFile.PathJoin(XEnv.DataPath, "Luban", "Luban.exe")
+                    const execFile = XFile.PathJoin(XEnv.LocalPath, "Luban", "Luban.exe")
                     if (XFile.HasFile(execFile)) {
                         fs.chmodSync(execFile, 0o755)
                         XLog.Debug(`Install.Process: chmod Luban.exe to 0o755.`)
