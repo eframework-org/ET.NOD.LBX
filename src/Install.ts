@@ -6,7 +6,7 @@
 
 import { XEnv, XFile, XLog, XString } from "ep.uni.util"
 import * as fs from "fs"
-import * as https from "https"
+import { https } from "follow-redirects"
 
 export namespace Install {
     export async function Process(args: string[]): Promise<string[]> {
