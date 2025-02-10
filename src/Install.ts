@@ -36,7 +36,7 @@ export namespace Install {
             if (XFile.HasFile(local) && XString.IsNullOrEmpty(version)) {
                 XLog.Debug(`Luban: @${XFile.OpenText(local)}`)
             } else {
-                if (XString.IsNullOrEmpty(version)) version = "3.11.0"
+                if (XString.IsNullOrEmpty(version)) version = "3.12.0"
                 try {
                     let url = `https://github.com/focus-creative-games/luban/releases/download/v${version}/Luban.7z`
 

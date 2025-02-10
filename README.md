@@ -20,7 +20,7 @@ NOD.LBX 工具简化了 [Luban](https://github.com/focus-creative-games/luban) �
 - Command/命令: lubanx [options]
   * --help: reveal manual. 查看文档。
   * --version: print version. 显示版本。
-  * --install=${version}: install Luban toolchains, default: 3.11.0. 安装工具链, 默认: 3.11.0。
+  * --install=${version}: install Luban toolchains, default: 3.12.0. 安装工具链, 默认: 3.12.0。
   * * --gitproxy=${url}: git proxy url, default: https://ghproxy.cn/. git代理地址, 默认: https://ghproxy.cn/。
 
 ## FAQ | 常见问题
