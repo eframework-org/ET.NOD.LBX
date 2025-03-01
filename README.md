@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/npm/v/et.nod.lbx)](https://www.npmjs.com/package/et.nod.lbx)
 [![Downloads](https://img.shields.io/npm/dm/et.nod.lbx)](https://www.npmjs.com/package/et.nod.lbx)  
 
-NOD.LBX 工具简化了 [Luban](https://github.com/focus-creative-games/luban) 的安装和使用。
+ET.NOD.LBX 工具简化了 [Luban](https://github.com/focus-creative-games/luban) 的安装和使用。
 
 ## 功能特性
 

@@ -1,7 +1,7 @@
 {
   "name": "et.nod.lbx",
   "displayName": "LubanX",
-  "description": "NOD.LBX 工具简化了 [Luban](https://github.com/focus-creative-games/luban) 的安装和使用。",
+  "description": "ET.NOD.LBX 工具简化了 [Luban](https://github.com/focus-creative-games/luban) 的安装和使用。",
   "version": "0.0.2",
   "author": "eframework-org",
   "homepage": "https://github.com/eframework-org",
