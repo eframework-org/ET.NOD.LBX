@@ -124,7 +124,7 @@
 - 类名：使用 PascalCase
 - 函数名：使用 PascalCase
 - 变量名：使用 camelCase
-- 常量名：使用 UPPER_CASE
+- 常量名：使用 PascalCase
 - 文件名：使用 PascalCase
 
 ### 3. 注释规范
